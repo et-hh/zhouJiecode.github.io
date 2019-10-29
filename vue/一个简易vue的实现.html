@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一个极其简易版的vue.js实现 | Hello ZhouJie</title>
+    <meta name="description" content="zhoujiecode.github.io">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.591c7bb4.css" as="style"><link rel="preload" href="/assets/js/app.e2a194ee.js" as="script"><link rel="preload" href="/assets/js/2.a9d8d6e1.js" as="script"><link rel="preload" href="/assets/js/30.c31a0439.js" as="script"><link rel="prefetch" href="/assets/js/10.d4b38d7e.js"><link rel="prefetch" href="/assets/js/11.ce085ce5.js"><link rel="prefetch" href="/assets/js/12.61cd2630.js"><link rel="prefetch" href="/assets/js/13.35d8a2a3.js"><link rel="prefetch" href="/assets/js/14.77752fe4.js"><link rel="prefetch" href="/assets/js/15.8035aaa5.js"><link rel="prefetch" href="/assets/js/16.7eed5d4a.js"><link rel="prefetch" href="/assets/js/17.bbe27344.js"><link rel="prefetch" href="/assets/js/18.d5144506.js"><link rel="prefetch" href="/assets/js/19.e17fe13d.js"><link rel="prefetch" href="/assets/js/20.17acd1f4.js"><link rel="prefetch" href="/assets/js/21.62013227.js"><link rel="prefetch" href="/assets/js/22.57d7ef72.js"><link rel="prefetch" href="/assets/js/23.e07f41ab.js"><link rel="prefetch" href="/assets/js/24.14f62e1d.js"><link rel="prefetch" href="/assets/js/25.1b083c8e.js"><link rel="prefetch" href="/assets/js/26.123f83bd.js"><link rel="prefetch" href="/assets/js/27.a9de788f.js"><link rel="prefetch" href="/assets/js/28.c03c2d4d.js"><link rel="prefetch" href="/assets/js/29.31df58e9.js"><link rel="prefetch" href="/assets/js/3.1c904442.js"><link rel="prefetch" href="/assets/js/31.5936de1b.js"><link rel="prefetch" href="/assets/js/4.a537c09d.js"><link rel="prefetch" href="/assets/js/5.6dd46805.js"><link rel="prefetch" href="/assets/js/6.1508c292.js"><link rel="prefetch" href="/assets/js/7.343909a9.js"><link rel="prefetch" href="/assets/js/8.9eb980b3.js"><link rel="prefetch" href="/assets/js/9.cc25dde8.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.591c7bb4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Hello ZhouJie</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">Home</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">Home</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Vue</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vue/vue项目开发.html" class="sidebar-link">vue项目开发</a></li><li><a href="/vue/ssr.html" class="sidebar-link">ssr</a></li><li><a href="/vue/一个简易vue的实现.html" class="active sidebar-link">一个简易vue的实现</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vue/一个简易vue的实现.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/vue/一个简易vue的实现.html#实现" class="sidebar-link">实现</a></li><li class="sidebar-sub-header"><a href="/vue/一个简易vue的实现.html#总结" class="sidebar-link">总结</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Gulp</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/gulp/_build.html" class="sidebar-link">打包</a></li><li><a href="/gulp/_index.html" class="sidebar-link">在文件中插入内容</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Sip</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/sip/sipJS初探.html" class="sidebar-link">sipJS初探</a></li><li><a href="/sip/sipJs实现早期媒体.html" class="sidebar-link">sipJs实现早期媒体</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>杂记</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/notes/markdown语法.html" class="sidebar-link">markdown语法</a></li><li><a href="/notes/versionNum.html" class="sidebar-link">文件版本号</a></li><li><a href="/vscode/config.html" class="sidebar-link">vscode常用配置</a></li><li><a href="/notes/jsFuncs.html" class="sidebar-link">js常用工具函数</a></li><li><a href="/notes/optimizeLoad.html" class="sidebar-link">前端加载优化</a></li><li><a href="/notes/jsonP.html" class="sidebar-link">jsonP原理</a></li><li><a href="/notes/nginxConf.html" class="sidebar-link">nginx配置</a></li><li><a href="/notes/mongoDB初探.html" class="sidebar-link">mongoDB初探</a></li><li><a href="/notes/前端使用ajax导出excel.html" class="sidebar-link">前端使用ajax导出excel</a></li><li><a href="/notes/web音频文件下载.html" class="sidebar-link">web音频文件下载</a></li><li><a href="/notes/gitlabCI.html" class="sidebar-link">gitlabCI</a></li><li><a href="/notes/devServerHTTPS.html" class="sidebar-link">webpack devserver开启https</a></li><li><a href="/notes/gitAlias.html" class="sidebar-link">win git alias &amp; win10便签</a></li><li><a href="/notes/Eslint结合Prettier实践.html" class="sidebar-link">Eslint结合Prettier实践</a></li><li><a href="/notes/清除gitbash登录信息&amp;重新记住用户名密码.html" class="sidebar-link">清除gitbash登录信息&amp;重新记住用户名密码</a></li><li><a href="/notes/移动端问题.html" class="sidebar-link">移动端开发一些问题</a></li><li><a href="/notes/git命令.html" class="sidebar-link">记两个git命令</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>请输入文章简介如：一个极其简易版的vue.js实现，仅仅用来帮助学习</p> <h2 id="前言"><a href="#前言" aria-hidden="true" class="header-anchor">#</a> 前言</h2> <p>之前项目中一直在用vue，也边做边学摸滚打爬了近一年。对一些基础原理性的东西有过了解，但是不深入，例如面试经常问的vue的响应式原理，可能大多数人都能答出来Object.defineProperty进行数据劫持，但是深入其实现细节，还是有很多之前没考虑到的东西，例如依赖收集后如何通知订阅器，以及订阅发布模式如何实现等等。过程中读了部分源码，受益匪浅，除此之外，动手去实现它也是个很棒的学习方式，话不多说，看代码，<a href="https://github.com/DanceOnBeat/rayactive" target="_blank" rel="noopener noreferrer">仓库地址<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <h2 id="实现"><a href="#实现" aria-hidden="true" class="header-anchor">#</a> 实现</h2> <p>vue的更新机制我们简单概括一下就是，先对template进行解析，若检测到template中使用了data中定义的属性，则生成一个对应的watcher，通过劫持getter进行依赖（即watcher）收集，收集的内容保存在订阅器Dep，通过劫持setter做到改变属性从而通知订阅器更新，那么我们首先要做的就是对属性进行劫持。
+vue2.0中使用的是Object.defineProperty，有传言说vue 3.0将会使用Proxy来代替Object.defineProperty，其有诸多好处：</p> <ul><li>defineProperty不能对数组进行劫持，因此vue的文档中才会提到只有push、pop等8种方法能够检测变化，而arr[index] = newValue并不能检测变化，push等方法能检测变化也是因为开发者对Array原生方法进行hack实现的。</li> <li>defineProperty只能改变对象的某一个属性，若需要劫持整个对象，必须遍历对象，对每个属性劫持，因此效率并不高。而Proxy更像是一个代理，它会产生一个新的对象，该对象内部的属性均以实现劫持。但要注意，某个属性若也是一个对象类型，需要对该属性也执行proxy操作才能实现劫持。</li></ul> <p>Proxy目前来看唯一的缺点就是兼容性可能存在问题，不过无伤大雅，我们也顺应潮流，使用Proxy来实现数据劫持，代码很简单：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 接受一个对象，对属性进行依赖追踪
+ */</span>
+<span class="token keyword">function</span> <span class="token function">observable</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> dep <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Dep</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  
+  <span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> property<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> value <span class="token operator">=</span> target<span class="token punctuation">[</span>property<span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">&amp;&amp;</span> <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 若属性为object，递归处理</span>
+        target<span class="token punctuation">[</span>property<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">observable</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Dep<span class="token punctuation">.</span>target<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// Dep.target指向当前watcher</span>
+        dep<span class="token punctuation">.</span><span class="token function">addWatcher</span><span class="token punctuation">(</span>Dep<span class="token punctuation">.</span>target<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> target<span class="token punctuation">[</span>property<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> property<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      target<span class="token punctuation">[</span>property<span class="token punctuation">]</span> <span class="token operator">=</span> value
+      dep<span class="token punctuation">.</span><span class="token function">notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 通知订阅器</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">return</span> proxy
+<span class="token punctuation">}</span>
+</code></pre></div><p>注意该方法需要返回proxy实例，因为只有通过proxy实例访问属性才具有劫持效果。我们可以看到代码中有一个Dep，这个东西即是订阅器，可以理解为它维护了一个依赖（watcher）的数组，并实现了一些管理数据的方法诸如addWatcher添加依赖，以及需要提供一个notify方法来遍历所有的watcher执行其相应的更新函数，同样代码很简单：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * 依赖收集器，存放所有的watcher，并提供发布功能(notify)
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Dep</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>watchers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">addWatcher</span><span class="token punctuation">(</span><span class="token parameter">watcher</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 添加watcher</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>watchers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>watcher<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">notify</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 通知方法，调用即依次遍历所有watcher执行更新</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>watchers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">watcher</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      watcher<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后我们来看下watcher，我们知道watcher即我们所说的依赖，它是在编译template的时候，若找到data中声明的属性，即会生成一个对应的watcher实例，触发依赖收集，加入订阅器。同时还需要提供一个update函数，在触发notify的时候调用来更新视图，代码如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">/**
+ * watcher即所谓的依赖，监听具体的某个属性
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">Watcher</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">proxy<span class="token punctuation">,</span> property<span class="token punctuation">,</span> cb</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>proxy <span class="token operator">=</span> proxy
+    <span class="token keyword">this</span><span class="token punctuation">.</span>property <span class="token operator">=</span> property
+    <span class="token keyword">this</span><span class="token punctuation">.</span>cb <span class="token operator">=</span> cb
+    <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 执行更新</span>
+    <span class="token keyword">const</span> newValue <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>proxy<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>property<span class="token punctuation">]</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>newValue <span class="token operator">!==</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>cb<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 对比property新旧值，决定是否更新</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">cb</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 只在初始化时调用，用于依赖收集</span>
+    Dep<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token keyword">this</span> <span class="token comment">// 将自身指向Dep.target，执行完依赖收集再去释放</span>
+    <span class="token keyword">const</span> value <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>proxy<span class="token punctuation">[</span><span class="token keyword">this</span><span class="token punctuation">.</span>property<span class="token punctuation">]</span>
+    Dep<span class="token punctuation">.</span>target <span class="token operator">=</span> <span class="token keyword">null</span>
+    <span class="token keyword">return</span> value
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>至此，响应式原理大致已经成形，接着我们只要写一个简易的模板解析，demo就能跑起来啦。我这边的实现比较挫，仅仅是通过正则匹配来实现了一个不带diff的virture dom，纯属娱乐，重点还是在实现响应式原理上，这边贴一下代码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> init <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token comment">// 只在初始化时去生成watcher</span>
+<span class="token keyword">const</span> eventMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 存放事件</span>
+<span class="token keyword">const</span> root <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span> <span class="token comment">// 根节点</span>
+
+<span class="token comment">/**
+ * 用于将传入RayActive的vm对象进行代理，可通过this.xx访问this.data.xx
+ * @param {Object} vm 
+ * @param {Proxy} proxydata 经过proxy代理的vm.data对象，使this.xx操作也能触发视图更新
+ */</span>
+<span class="token keyword">function</span> <span class="token function">vmProxy</span><span class="token punctuation">(</span><span class="token parameter">vm<span class="token punctuation">,</span> proxydata</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>vm<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token keyword">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> property<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> target<span class="token punctuation">.</span>data<span class="token punctuation">[</span>property<span class="token punctuation">]</span> <span class="token operator">||</span> target<span class="token punctuation">.</span>methods<span class="token punctuation">[</span>property<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token keyword">set</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> property<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      proxydata<span class="token punctuation">[</span>property<span class="token punctuation">]</span> <span class="token operator">=</span> value
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 编译vm，分别对data和render做相应处理
+ * @param {Object} vm 需要被编译的vm对象
+ */</span>
+<span class="token keyword">function</span> <span class="token function">compile</span><span class="token punctuation">(</span><span class="token parameter">vm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> proxydata <span class="token operator">=</span> <span class="token function">compileData</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+  <span class="token function">compileRender</span><span class="token punctuation">(</span>proxydata<span class="token punctuation">,</span> vm<span class="token punctuation">.</span>render<span class="token punctuation">)</span>
+  <span class="token function">bindEvents</span><span class="token punctuation">(</span>vm<span class="token punctuation">,</span> <span class="token function">vmProxy</span><span class="token punctuation">(</span>vm<span class="token punctuation">,</span> proxydata<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 
+ * @param {Object} data 需要被编译的vm中的data对象
+ */</span>
+<span class="token keyword">function</span> <span class="token function">compileData</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token function">observable</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 
+ * @param {*} render 需要被编译的render字符串
+ * @param {*} proxydata 经proxy转换过的data
+ */</span>
+<span class="token keyword">function</span> <span class="token function">compileRender</span><span class="token punctuation">(</span><span class="token parameter">proxydata<span class="token punctuation">,</span> render</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>render<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> variableRegexp <span class="token operator">=</span> <span class="token regex">/\{\{(.*?)\}\}/g</span>
+    <span class="token keyword">const</span> variableResult <span class="token operator">=</span> render<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>variableRegexp<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// 替换变量为相应的data值</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>init<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// 只在初始化时去生成watcher</span>
+        <span class="token keyword">new</span> <span class="token class-name">Watcher</span><span class="token punctuation">(</span>proxydata<span class="token punctuation">,</span> b<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token function">compileRender</span><span class="token punctuation">(</span>proxydata<span class="token punctuation">,</span> render<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">return</span> proxydata<span class="token punctuation">[</span>b<span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> eventRegexp <span class="token operator">=</span> <span class="token regex">/(?&lt;=&lt;.*)@(.*)=&quot;(.*?)&quot;(?=.*&gt;)/</span>
+    <span class="token keyword">const</span> result <span class="token operator">=</span> variableResult<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span>eventRegexp<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token comment">// 为绑定事件的标签添加唯一id标识</span>
+      <span class="token keyword">const</span> id <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">36</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+      eventMap<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>id<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+        type<span class="token punctuation">:</span> b<span class="token punctuation">,</span>
+        method<span class="token punctuation">:</span> c
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+      <span class="token keyword">return</span> a <span class="token operator">+</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string"> id=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>id<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    init <span class="token operator">=</span> <span class="token boolean">true</span>
+    root<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> result
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 通过root节点做事件代理，绑定模板中声明的事件
+ * @param {*} vm 
+ * @param {*} proxyvm 经过proxy代理的vm
+ */</span>
+<span class="token keyword">function</span> <span class="token function">bindEvents</span><span class="token punctuation">(</span><span class="token parameter">vm<span class="token punctuation">,</span> proxyvm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> <span class="token punctuation">[</span>key<span class="token punctuation">,</span> value<span class="token punctuation">]</span> <span class="token keyword">of</span> eventMap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    root<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>value<span class="token punctuation">.</span>type<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> method <span class="token operator">=</span> vm<span class="token punctuation">.</span>methods<span class="token punctuation">[</span>value<span class="token punctuation">.</span>method<span class="token punctuation">]</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>method <span class="token operator">&amp;&amp;</span> e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>id <span class="token operator">===</span> key<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">method</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>proxyvm<span class="token punctuation">)</span> <span class="token comment">// 将vm中methods方法的this指向经过proxy的vm对象</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * 可理解为Vue中的Vue类，使用方式为new RayActive(vm)
+ */</span>
+<span class="token keyword">class</span> <span class="token class-name">RayActive</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">vm</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">compile</span><span class="token punctuation">(</span>vm<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="总结"><a href="#总结" aria-hidden="true" class="header-anchor">#</a> 总结</h2> <p>这个简易实现仅仅是帮助大家学习vue的一些原理性的东西，跟vue比其他来只是冰山一角。这个代码还有很大的优化空间，比如执行notify时这里会通知所有的watcher等等，值得有空去研究一下。同时，我们能看到订阅发布模式带来的好处。如果不引入订阅器，那我们更新dom的代码得放到setter中去，那么就耦合了数据劫持与操作dom的逻辑。引入订阅器，能让我们在proxy中仅仅做依赖收集和通知的操作，剩下的各种复杂的或是个性化的逻辑可以放到watcher中去实现，完美做到了关注点分离。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vue/ssr.html" class="prev">ssr</a></span> <span class="next"><a href="/gulp/_build.html">打包</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.e2a194ee.js" defer></script><script src="/assets/js/2.a9d8d6e1.js" defer></script><script src="/assets/js/30.c31a0439.js" defer></script>
+  </body>
+</html>
